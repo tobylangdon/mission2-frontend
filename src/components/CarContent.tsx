@@ -14,6 +14,8 @@ interface ErrorImageResponse {
     message: string;
 }
 
+const API_ENDPOINT = import.meta.env.VITE_API;
+
 export default function CarContent() {
     const [imageUrl, setImageUrl] = useState<string>("");
     const [base64Data, setBase64Data] = useState<string>("");
@@ -53,12 +55,13 @@ export default function CarContent() {
         e.preventDefault();
         setCarImageError(undefined);
         setCarImageData(undefined);
+        console.log(API_ENDPOINT);
         if (showError) {
             return;
         }
         axios
             .post(
-                "http://localhost:5000/api/car-recognition",
+                `${API_ENDPOINT}/api/car-recognition`,
                 { url: isUrl ? imageUrl : base64Data, isUrl },
                 {
                     headers: {

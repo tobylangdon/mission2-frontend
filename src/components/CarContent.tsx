@@ -153,7 +153,6 @@ export default function CarContent() {
                 </>
             )}
             {carImageError && <p>{carImageError.message}</p>}
-            {import.meta.env.VITE_TEST}
         </div>
     );
 }

@@ -1,8 +1,7 @@
 import styles from "./CarContent.module.css";
-import { FormEvent, useEffect, useState } from "react";
+import { FormEvent, useState } from "react";
 import Button from "@mui/material/Button";
 import axios from "axios";
-import DragDrop from "./DragDrop";
 
 interface AzureResponse {
     brands: Brands[];

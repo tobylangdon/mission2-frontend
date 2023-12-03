@@ -195,8 +195,13 @@ export default function CarContent() {
             </form>
             {carImageData && (
                 <>
-                    <h2>Car Type: </h2>
-                    <p>{carImageData?.type}</p>
+                    {carImageData.type && (
+                        <>
+                            <h2>Car Type: </h2>
+                            <p>{carImageData?.type}</p>
+                        </>
+                    )}
+
                     {carImageData.brand && (
                         <>
                             <h2>Car brand: </h2>
@@ -209,6 +214,7 @@ export default function CarContent() {
                             <p>{carImageData.colours.map((colour) => colour)}</p>
                         </>
                     )}
+                    {!carImageData.type && !carImageData.brand && !carImageData.colours && <p>We could not determine what this car may be with certainty</p>}
                 </>
             )}
             {carImageError && <p>{carImageError.message}</p>}

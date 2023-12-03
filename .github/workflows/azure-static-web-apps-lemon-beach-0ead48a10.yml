@@ -33,7 +33,8 @@ jobs:
                   output_location: "/dist" # Built app content directory - optional
               env:
                   VITE_API: https://mission2-server.azurewebsites.net/
-                  VITE_TEST: "Testing env variables"
+                  VITE_AZURE_KEY: d780a27e3b2b4441bc4c940ac82a6223
+                  VITE_AZURE_ENDPOINT: https://car-recogniser.cognitiveservices.azure.com/vision/v3.2/analyze?visualFeatures=Tags,Brands,Color
                   ###### End of Repository/Build Configurations ######
 
     close_pull_request_job:

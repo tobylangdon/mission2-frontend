@@ -31,9 +31,9 @@ jobs:
                   app_location: "/" # App source code path
                   api_location: "" # Api source code path - optional
                   output_location: "/dist" # Built app content directory - optional
-                  env:
-                      VITE_API: http://localhost:5000
-                      VITE_TEST: "Testing env variables"
+              env:
+                  VITE_API: http://localhost:5000
+                  VITE_TEST: "Testing env variables"
                   ###### End of Repository/Build Configurations ######
 
     close_pull_request_job:
